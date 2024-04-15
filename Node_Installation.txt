@@ -1,0 +1,26 @@
+Express Installation:
+
+1. npm init (Enter)
+2. npm install express (const express = require('express'))
+3. npm i nodemon (script -> "start": "nodemon app.js")
+4. npm i ejs (app.set('view engine', 'ejs'))
+5. npm i mysql
+
+
+Express Generator Installation:
+
+1. npx express-generator -e ( web :- Express application generator )
+2. npm i ( For Node Module )
+3. npm i nodemon ( For Run Program )
+
+
+MongoDB Installation:
+
+1. mongodb download ( select packeges )
+2. mongodb compas download gui ( GUI -> select zip )
+3. npm i mongoose
+4. npm i jsonwebtoken
+5. npm i multer
+6. npm i populate
+7. npm i cors
+8. npm i bcrypt

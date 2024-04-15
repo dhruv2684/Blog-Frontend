@@ -1,0 +1,16 @@
+
+➡💨 React
+
+👉 install react: npx create-react-app./
+
+👉 React router dom: npm install react-router-dom@s (react router dom v5 GET TRAINING BLOG react router v5 )
+
+👉 React Bootstrap: npm install react-bootstrap bootstrap (import 'bootstrap/dist/css/bootstrap.min.css';)
+
+👉 React Slick Slider : npm install react-slick, npm install slick-carousel (import "slick-carousel/slick/slick.css"; import "slick- carousel/slick/slick-theme.css"; )
+
+👉 React Icon: npm install react-icons (import { Faßeer} from 'react-icons/fa';)
+
+👉 React Axios: npm i axios
+
+👉 React Yup: npm i yup
