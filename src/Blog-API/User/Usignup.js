@@ -3,7 +3,6 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import axios from 'axios';
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import * as Yup from "yup";
-import { Button } from 'bootstrap';
 
 const Usignup = () => {
 
@@ -17,7 +16,7 @@ const Usignup = () => {
 
 
     return (
-        <div className='d-flex justify-content-center align-items-center mt-5 mb-5'>
+        <div className='d-flex justify-content-center align-items-center mtb-30 '>
             <div className="box-1">
                 <h1 className='mb-4'>User Signup</h1>
                 <Formik
@@ -58,10 +57,10 @@ const Usignup = () => {
                         <span><ErrorMessage name='password' /><br /><br /></span>
 
                         <div className='d-flex justify-content-center'>
-                            <Button type="submit" className='button submit'>Signup</Button>
+                            {/* <a type="submit" className=' submit'>Signup</a> */}
+                            <button type="submit" className=' submit'>Submit</button>
                         </div>
-                        {/* <p className='text-center mt-3'><Link to="/user/login" className="text-dark ">Already Have An Account.?</Link></p> */}
-                        <Link to="/user/login" className="text-dark mt-3 text-center"><li className=' me-2 fw-bold  blog-btn'>Already Have An Account.?</li></Link>
+                        <Link to="/user/login" className="text-dark mt-3 text-center"><li className=' me-2 fw-bold  '><span className='dot-colr'>Already Have An Account.?</span></li></Link>
                     </Form>
                 </Formik>
             </div>

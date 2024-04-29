@@ -18,9 +18,9 @@ const Ulogin = () => {
     });
 
     return (
-        <div className='d-flex justify-content-center align-items-center mt-5 mb-5 bg-img'>
+        <div className='d-flex justify-content-center align-items-center mtb-30 bg-img'>
             <div className="box-1">
-                <h1 className='mb-4 mt-5'>User Login</h1>
+                <h1 className='mb-3 mt-3'>User Login</h1>
                 <Formik
                     initialValues={{
                         email: '',
@@ -58,8 +58,7 @@ const Ulogin = () => {
                         <div className='d-flex justify-content-center '>
                             <button type="submit" className='button submit'>Login</button>
                         </div>
-                        {/* <p className='text-center mt-3'><Link to="/user/signup" className="text-dark">Don't Have An Account ? Please signup</Link></p> */}
-                        <Link to="/user/signup" className=" text-dark mt-3 text-center"><li className=' fw-bold blog-btn'>Don't Have An Account ? Please signup</li></Link>
+                        <Link to="/user/signup" className=" text-dark mt-3 text-center"><li className=' fw-bold'>Don't Have An Account ? <span className='dot-colr'> Please signup</span></li></Link>
 
                     </Form>
                 </Formik>

@@ -45,7 +45,8 @@ const Cblog = () => {
                 }
             })
             .then((res) => {
-                console.log(res.data.data);
+                console.log(res);
+                localStorage.setItem('blogid', res.data.data._id)
                 history.push('/')
             })
             .catch((error) => {

@@ -14,7 +14,7 @@ import { FaBlog } from "react-icons/fa6";
 const Footer = () => {
     return (
         <div>
-            
+
             <Container fluid className='bg-dark pt-5 ps-0 pe-0 text-white '>
                 <Container className=''>
                     <Row>
@@ -27,12 +27,13 @@ const Footer = () => {
                                     <li className=' ps-4 fs-3 list-unstyled fw-bold'><Link to="/" className="hov-blog text-white"><FaTwitter /></Link></li>
                                     <li className=' ps-4 fs-3 list-unstyled fw-bold'><Link to="/" className="hov-blog text-white"><FaGooglePlusG /></Link></li>
                                 </ul>
-                                <p className='text-center'>© 2024 by Design for Blogger .Powered and secured by <span className='contact-p'>Dhruv Dholiya</span></p>
+                                <p className='text-center'>© 2024 by Design for Blogger .Powered and secured by <span className='dot-colr'>*Your_Full Name</span></p>
                             </div>
                         </div>
                     </Row>
                 </Container>
             </Container>
+
         </div>
     )
 }

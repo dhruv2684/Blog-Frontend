@@ -3,16 +3,19 @@ import React, { useEffect, useState, Component } from 'react'
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { Container, Row } from 'react-bootstrap';
 
-import img from '../BLog Img/blog-1.webp'
-import main from '../BLog Img/main.webp'
+import { FaArrowRightLong } from "react-icons/fa6";
+import { LuRedoDot } from "react-icons/lu";
 
-import Slider from "react-slick";
+import blog1 from '../BLog Img/blog1.jpg'
+import blog2 from '../BLog Img/blog2.jpg'
+import blog3 from '../BLog Img/blog3.jpg'
+
 
 const Home = () => {
 
+  const history = useHistory()
   const [blog, setBlog] = useState([])
 
-  const history = useHistory()
 
   const getBlog = () => {
     axios.get('https://blog-api-2agl.onrender.com/blog/find')
@@ -21,7 +24,7 @@ const Home = () => {
         setBlog(res.data.data)
       })
       .catch((error) => {
-        alert(error.response.data.message);
+        alert(error.response.data);
       })
   }
 
@@ -35,87 +38,93 @@ const Home = () => {
     history.push('/blog')
   }
 
-
-  // Slider Setting
-  const settings = {
-    // dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    // cssEase: "linear"
-  };
-
   return (
     <div>
 
       {/* Main IMG */}
-      <div className="container-fluid  position-relative  p-0">
-        <div className="row align-items-center">
-          <div className="p-0 img">
-            <img width="100%" src={main} alt="" />
+      <Container fluid>
+        <Row>
+          <div className="p-0 img mt-5">
+            <div className="text-center pt-5">
+              <h1 className='fs-60 fs-sm-6'>DESIGN <span className='fs-2 fs-sm-6 for'>FOR</span> LIFE</h1>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div className="container-fluid pos-ab">
-        <div className="row align-items-center">
-          <div className="p-0">
-            <h1 className='fs-60 fs-sm-6'>DESIGN <span className='fs-2 fs-sm-6 for'>FOR</span> LIFE</h1>
-          </div>
-        </div>
-      </div>
+        </Row>
+      </Container>
 
       {/* Blog,Map Card */}
-      {/* <Container fluid className='bg-lite text-dark pt-5 pb-5 ps-0 pe-0'>
+      <Container fluid className='bg-lite text-dark pt-5 pb-5 ps-0 pe-0'>
         <Container className="">
           <Row className="  ">
             {
               blog.map((el, index) => {
-                return <div className="col-lg-4 position-relative img-hov" key={index}>
-                  <div className=''>
-                    <img width="100%" className='' onClick={() => card(el._id)} src={'https://blog-api-2agl.onrender.com/images/' + el.image} alt="" />
+                return <div className="col-12 ">
+                  <div className='img-box point'>
+                    <img className='img-bor' onClick={() => card(el._id)} src={'https://blog-api-2agl.onrender.com/images/' + el.image} alt="" />
                   </div>
-                  <div className='pos-ab-1 text-center '>
-                    <h3 className='mt-2 '>{el.title}</h3>
+                  <div className='ps-md-5 ps-3'>
+                    <h2 className='mt-2 '>{el.title}</h2>
+                    <p className='text-dark fs-5 mt-3'>{el.decription}</p>
                     <hr />
-                    <p className='ms-1'><a href="/blog" onClick={() => card(el._id)} className='text-white fs-5 Read-more mt-3'>Read More..!</a></p>
+                    <p className='ms-1'><a href="/blog" className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
                   </div>
                 </div>
               })
             }
           </Row>
         </Container>
-      </Container> */}
-
-
-      {/* Slider */}
-      <Container fluid className='mt-5 mb-5'>
-        <Row className='d-flex'>
-          <div className="slider-container p-0">
-            <Slider {...settings}>
-              {
-                blog.map((el, index) => {
-                  return <div className="col-lg-4 m-2 position-relative img-hov" key={index}>
-                    <div className='m-2'>
-                      <div className=''>
-                        <img width="100%" className='' onClick={() => card(el._id)} src={'https://blog-api-2agl.onrender.com/images/' + el.image} alt="" />
-                      </div>
-                      <div className='pos-ab-1 text-center '>
-                        <h3 className='mt-2 '>{el.title}</h3>
-                        <hr />
-                        <p className='ms-1'><a href="/blog" onClick={() => card(el._id)} className='text-white fs-5 Read-more mt-3'>Read More..!</a></p>
-                      </div>
-                    </div>
-                  </div>
-                })
-              }
-            </Slider>
-          </div>
-        </Row>
       </Container>
+
+      {/* Blog Card */}
+      <Container fluid className='bg-lite text-dark pt-5 pb-5 ps-0 pe-0'>
+        <Container className="">
+          <Row className='mb-md-4 mb-3 text-center'>
+            <h1>Writing <LuRedoDot className='dot-colr fs-3' /></h1>
+          </Row>
+          <Row className='g-5'>
+            <div className="col-12 " onClick={card}>
+              <div className='img-box point'>
+                <img className='img-bor' src={blog1} alt="" />
+              </div>
+              <div className='ps-md-5 ps-3 '>
+                <h2 className='mt-2 '>title</h2>
+                <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
+                <hr />
+                <p className='ms-1'><a href="/blog" className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
+              </div>
+            </div>
+            <div className="col-12 " onClick={card}>
+              <div className='img-box point'>
+                <img className='img-bor' src={blog2} alt="" />
+              </div>
+              <div className='ps-md-5 ps-3 '>
+                <h2 className='mt-2 '>title</h2>
+                <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
+                <hr />
+                <p className='ms-1'><a href="/blog" className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
+              </div>
+            </div>
+            <div className="col-12 " onClick={card}>
+              <div className='img-box point'>
+                <img className='img-bor' src={blog3} alt="" />
+              </div>
+              <div className='ps-md-5 ps-3 '>
+                <h2 className='mt-2 '>title</h2>
+                <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
+                <hr />
+                <p className='ms-1'><a href="/blog" className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
+              </div>
+            </div>
+          </Row>
+          <Row>
+            <div className='text-center mt-5 '>
+              <a href="/all/blog" className="text-white fs-5 p-3 blog-btn rounded-0 fw-bold">View All Blog  <FaArrowRightLong /></a>
+            </div>
+          </Row>
+        </Container>
+      </Container>
+
+
 
 
     </div>
