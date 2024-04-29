@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import axios from 'axios';
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
@@ -14,20 +14,35 @@ const Cblog = () => {
     const history = useHistory()
 
     let usertoken = localStorage.getItem('usertoken')
-    if(!usertoken){
+    if (!usertoken) {
         history.push('/user/login')
     }
 
-    function update(id) {
-        axios.get('https://blog-api-2agl.onrender.com/contact/findone/' + id)
-            .then((res) => {
-                setInitialValues(res.data.data)
-                setRow(id)
-            })
-            .catch((error) => {
-                alert("error", error.response.data.message);
-            })
-    }
+    let upId = localStorage.getItem('updateId')
+    useEffect(() => {
+        if (upId) {
+            axios.get('https://blog-api-2agl.onrender.com/blog/findone/' + upId)
+                .then((res) => {
+                    console.log("hftre", res.data.data);
+                    setInitialValues(res.data.data)
+                    setRow(upId)
+                })
+                .catch((error) => {
+                    console.log(error.response.data.message);
+                })
+        }
+    }, [])
+
+    // function update(id) {
+    //     axios.get('https://blog-api-2agl.onrender.com/contact/findone/' + id)
+    //         .then((res) => {
+    //             setInitialValues(res.data.data)
+    //             setRow(id)
+    //         })
+    //         .catch((error) => {
+    //             alert("error", error.response.data.message);
+    //         })
+    // }
 
 
     const BlogData = (values) => {
@@ -37,21 +52,45 @@ const Cblog = () => {
         form.append('title', values.title);
         form.append('description', values.description);
 
-        axios.post('https://blog-api-2agl.onrender.com/blog/create', form,
-            {
-                headers: {
-                    usertoken: usertoken,
-                    'Content-Type': 'multipart/form-data'
-                }
-            })
-            .then((res) => {
-                console.log(res);
-                localStorage.setItem('blogid', res.data.data._id)
-                history.push('/')
-            })
-            .catch((error) => {
-                alert(error.response);
-            })
+        if (row == null) {
+            axios.post('https://blog-api-2agl.onrender.com/blog/create', form,
+                {
+                    headers: {
+                        usertoken: usertoken,
+                        'Content-Type': 'multipart/form-data'
+                    }
+                })
+                .then((res) => {
+                    console.log(res);
+                    localStorage.setItem('blogid', res.data.data._id)
+                    console.log(res.data.data);
+                    setInitialValues('')
+                    setRow(null)
+                    history.push('/blog')
+                })
+                .catch((error) => {
+                    alert(error.response);
+                })
+        }
+        else {
+            console.log("update");
+            axios.put('https://blog-api-2agl.onrender.com/blog/update/' + upId, form,
+                {
+                    headers: {
+                        usertoken: usertoken,
+                        'Content-Type': 'multipart/form-data'
+                    }
+                })
+                .then((res) => {
+                    console.log(res.data.data);
+                    setInitialValues('')
+                    setRow(null)
+                    history.push('/')
+                })
+                .catch((error) => {
+                    console.log(error.response);
+                })
+        }
 
     }
 
@@ -64,7 +103,7 @@ const Cblog = () => {
 
 
     return (
-        <div className='d-flex justify-content-center align-items-center mt-5 mb-5'>
+        <div className='d-flex justify-content-center align-items-center mtb-30 '>
             <div className="box-1">
                 <h1>Create Blog </h1>
                 <Formik

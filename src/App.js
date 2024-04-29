@@ -25,7 +25,6 @@ import Cblog from './Blog-API/Blog/Cblog';
 import Blog from './Blog-API/Blog/Blog';
 import Footer from './Blog-API/Footer';
 import Protect from './Blog-API/Protect/Protect';
-import Allblog from './Blog-API/Blog/Allblog';
 import About from './Blog-API/About';
 import Contact from './Blog-API/Contact';
 
@@ -62,9 +61,6 @@ function App() {
             <Blog></Blog>
           </Route>
 
-          <Route path="/all/blog">
-            <Allblog></Allblog>
-          </Route>
 
           <Route path="/about/us">
             <About></About>

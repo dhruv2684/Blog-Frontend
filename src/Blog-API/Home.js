@@ -66,7 +66,7 @@ const Home = () => {
                     <h2 className='mt-2 '>{el.title}</h2>
                     <p className='text-dark fs-5 mt-3'>{el.decription}</p>
                     <hr />
-                    <p className='ms-1'><a href="/blog" className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
+                    <p className='ms-1'><a href="" onClick={() => card(el._id)} className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
                   </div>
                 </div>
               })
@@ -90,7 +90,7 @@ const Home = () => {
                 <h2 className='mt-2 '>title</h2>
                 <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
                 <hr />
-                <p className='ms-1'><a href="/blog" className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
+                <p className='ms-1'><a href=""  onClick={card} className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
               </div>
             </div>
             <div className="col-12 " onClick={card}>
@@ -101,7 +101,7 @@ const Home = () => {
                 <h2 className='mt-2 '>title</h2>
                 <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
                 <hr />
-                <p className='ms-1'><a href="/blog" className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
+                <p className='ms-1'><a href=""  onClick={card} className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
               </div>
             </div>
             <div className="col-12 " onClick={card}>
@@ -112,7 +112,7 @@ const Home = () => {
                 <h2 className='mt-2 '>title</h2>
                 <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
                 <hr />
-                <p className='ms-1'><a href="/blog" className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
+                <p className='ms-1'><a href=""  onClick={card} className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
               </div>
             </div>
           </Row>

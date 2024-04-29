@@ -36,10 +36,14 @@ const Blog = () => {
       })
   }
 
-  // Update
-  // const Update = (id) => {
-  //   history.push('/blog/create')
-  // }
+  // update
+  const Update = (id) => {
+    console.log("id :- ", id);
+    localStorage.setItem('updateId', id)
+    history.push('/blog/create')
+  }
+
+
 
   useEffect(() => {
     getBlogone()
@@ -75,12 +79,12 @@ const Blog = () => {
 
               <div className="d-md-flex mt-md-5 mt-4  ">
                 <div className="col-md-6 col-12  d-flex justify-content-md-start justify-content-center">
-                    <a href="/" className="text-dark fs-5 p-3 blog-btn rounded-0 fw-bold"> <FaArrowLeftLong /> Back To Home</a>
-                  </div>
+                  <a href="/" className="text-dark fs-5 p-3 blog-btn rounded-0 fw-bold"> <FaArrowLeftLong /> Back To Home</a>
+                </div>
                 <div className="col-md-6 col-12 mt-md-0 mt-4 d-flex justify-content-md-end justify-content-center">
-                  <a onClick={() => Delet(data._id)} className="text-white me-2 fs-6 p-2 bg-dark rounded-0 fw-bold"> Delete</a>
-                  {/* <a onClick={() => Update(data._id)} className="text-white me-2 fs-6 p-2 bg-dark rounded-0 fw-bold"> Update</a> */}
-                  <a className="text-white me-2 fs-6 p-2 bg-dark rounded-0 fw-bold"> Update</a>
+                  <Link onClick={() => Delet(data._id)} className="text-white me-2 fs-6 p-2 bg-dark rounded-0 fw-bold"> Delete</Link>
+                  <Link onClick={() => Update(data._id)} className="text-white me-2 fs-6 p-2 bg-dark rounded-0 fw-bold"> Update</Link>
+                  {/* <a className="text-white me-2 fs-6 p-2 bg-dark rounded-0 fw-bold"> Update</a> */}
                 </div>
 
               </div>
