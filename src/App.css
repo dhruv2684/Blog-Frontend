@@ -298,9 +298,17 @@ textarea {
   .fs-60 {
     font-size: 40px;
   }
-
   .mt {
-    margin-top: 70px !important;
+    margin-top: 100px !important;
+  }
+  .img{
+    background-position: right;
+  }
+  .bg-design {
+    background-color: #00000094 !important;
+    color: wheat;
+    display: inline-block;
+    padding: 30px;
   }
 }
 
@@ -318,12 +326,6 @@ textarea {
 @media (max-width: 992px) {
   .mt {
     margin-top: 130px !important;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .mt {
-    margin-top: 110px !important;
   }
 }
 
