@@ -60,8 +60,8 @@ const Blog = () => {
     infinite: true,
     slidesToShow: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
-    speed: 1000,
+    autoplaySpeed: 2000,
+    speed: 2000,
     slidesToScroll: 1
   };
 

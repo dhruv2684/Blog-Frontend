@@ -48,8 +48,8 @@ const Home = () => {
     infinite: true,
     slidesToShow: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
-    speed: 1000,
+    autoplaySpeed: 2000,
+    speed: 2000,
     slidesToScroll: 1
   };
 
@@ -68,7 +68,7 @@ const Home = () => {
         </Row>
       </Container> */}
 
-      <Container fluid>
+      <Container fluid className='mt-15'>
         <Row>
           <div className="slider-container p-0">
             <Slider {...settings}>
@@ -95,7 +95,7 @@ const Home = () => {
           <Row className='mb-md-4 mb-3 text-center'>
             <h1>Writing <LuRedoDot className='dot-colr fs-3' /></h1>
           </Row>
-          
+
           <Row className="  ">
             {
               blog.map((el, index) => {
