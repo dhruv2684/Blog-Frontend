@@ -33,17 +33,6 @@ const Cblog = () => {
         }
     }, [])
 
-    // function update(id) {
-    //     axios.get('https://blog-api-2agl.onrender.com/contact/findone/' + id)
-    //         .then((res) => {
-    //             setInitialValues(res.data.data)
-    //             setRow(id)
-    //         })
-    //         .catch((error) => {
-    //             alert("error", error.response.data.message);
-    //         })
-    // }
-
 
     const BlogData = (values) => {
 
@@ -66,7 +55,7 @@ const Cblog = () => {
                     console.log(res.data.data);
                     setInitialValues('')
                     setRow(null)
-                    history.push('/blog')
+                    history.push('/')
                 })
                 .catch((error) => {
                     alert(error.response);

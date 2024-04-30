@@ -44,9 +44,9 @@ const Home = () => {
       {/* Main IMG */}
       <Container fluid>
         <Row>
-          <div className="p-0 img mt-5">
-            <div className="text-center pt-5">
-              <h1 className='fs-60 fs-sm-6'>DESIGN <span className='fs-2 fs-sm-6 for'>FOR</span> LIFE</h1>
+          <div className="p-0 img ">
+            <div className="text-center mt ms-5 bg-design">
+              <h1 className='fs-60 '>DESIGN <span className='fs-2 fs-sm-6 for'><br />FOR</span> LIFE</h1>
             </div>
           </div>
         </Row>

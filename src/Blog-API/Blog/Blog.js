@@ -5,6 +5,7 @@ import { Container, Row } from 'react-bootstrap';
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
+
 const Blog = () => {
 
   const history = useHistory()
@@ -65,7 +66,6 @@ const Blog = () => {
       </Container>
 
 
-
       <div className="container-fluid p-0">
         <div className="container">
           <div className="row">
@@ -92,6 +92,7 @@ const Blog = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
