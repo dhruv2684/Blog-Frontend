@@ -79,7 +79,6 @@
   width: 100% !important;
   height: 100vh !important;
   background-attachment: fixed !important;
-  overflow: hidden;
 }
 
 .point {
@@ -172,7 +171,12 @@
 }
 
 
-
+.slick-arrow{
+  display: none !important;
+}
+.slick-arrow .slick-prev{
+  display: none !important;
+}
 
 
 /* slider-img */
@@ -299,7 +303,7 @@ textarea {
     font-size: 40px;
   }
   .mt {
-    margin-top: 100px !important;
+    margin-top: 0px !important;
   }
   .img{
     background-position: right;

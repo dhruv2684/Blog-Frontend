@@ -1,9 +1,15 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Container, Row } from 'react-bootstrap';
+import { Button, Container, Row } from 'react-bootstrap';
 
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+
+import Slider from "react-slick";
+import ss1 from '../../BLog Img/slider (1).png'
+import ss2 from '../../BLog Img/slider (2).png'
+import ss3 from '../../BLog Img/slider (3).png'
+import ss4 from '../../BLog Img/slider (4).png'
 
 
 const Blog = () => {
@@ -50,17 +56,46 @@ const Blog = () => {
     getBlogone()
   }, [])
 
+  const settings = {
+    infinite: true,
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    speed: 1000,
+    slidesToScroll: 1
+  };
 
   return (
     <div>
 
       {/* Main IMG */}
-      <Container fluid>
+      {/* <Container fluid>
         <Row>
           <div className="p-0 img mt-5">
             <div className="text-center pt-5">
               <h1 className='fs-60 fs-sm-6'>DESIGN <span className='fs-2 fs-sm-6 for'>FOR</span> LIFE</h1>
             </div>
+          </div>
+        </Row>
+      </Container> */}
+
+      <Container fluid>
+        <Row>
+          <div className="slider-container p-0">
+            <Slider {...settings}>
+              <div>
+                <img width="100%" height="100%" src={ss1} alt="" />
+              </div>
+              <div>
+                <img width="100%" height="100%" src={ss2} alt="" />
+              </div>
+              <div>
+                <img width="100%" height="100%" src={ss3} alt="" />
+              </div>
+              <div>
+                <img width="100%" height="100%" src={ss4} alt="" />
+              </div>
+            </Slider>
           </div>
         </Row>
       </Container>
@@ -82,8 +117,8 @@ const Blog = () => {
                   <a href="/" className="text-dark fs-5 p-3 blog-btn rounded-0 fw-bold"> <FaArrowLeftLong /> Back To Home</a>
                 </div>
                 <div className="col-md-6 col-12 mt-md-0 mt-4 d-flex justify-content-md-end justify-content-center">
-                  <Link onClick={() => Delet(data._id)} className="text-white me-2 fs-6 p-2 bg-dark rounded-0 fw-bold"> Delete</Link>
-                  <Link onClick={() => Update(data._id)} className="text-white me-2 fs-6 p-2 bg-dark rounded-0 fw-bold"> Update</Link>
+                  <Button onClick={() => Delet(data._id)} className="text-white me-2 fs-6 p-2 bg-dark rounded-0 fw-bold"> Delete</Button>
+                  <Button onClick={() => Update(data._id)} className="text-white me-2 fs-6 p-2 bg-dark rounded-0 fw-bold"> Update</Button>
                   {/* <a className="text-white me-2 fs-6 p-2 bg-dark rounded-0 fw-bold"> Update</a> */}
                 </div>
 

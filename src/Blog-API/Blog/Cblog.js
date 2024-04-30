@@ -11,15 +11,18 @@ const Cblog = () => {
     const [initialValues, setInitialValues] = useState([]);
     const [row, setRow] = useState(null);
 
+
     const history = useHistory()
-
     let usertoken = localStorage.getItem('usertoken')
-    if (!usertoken) {
-        history.push('/user/login')
-    }
-
     let upId = localStorage.getItem('updateId')
+
     useEffect(() => {
+
+        if (!usertoken) {
+            history.push('/user/login')
+        }
+
+
         if (upId) {
             axios.get('https://blog-api-2agl.onrender.com/blog/findone/' + upId)
                 .then((res) => {
@@ -71,7 +74,7 @@ const Cblog = () => {
                     }
                 })
                 .then((res) => {
-                    console.log(res.data.data);
+                    console.log("fffff",res.data.data);
                     setInitialValues('')
                     setRow(null)
                     history.push('/')
@@ -100,7 +103,9 @@ const Cblog = () => {
                         image: '',
                         title: '',
                         description: '',
+                        ...initialValues
                     }}
+                    enableReinitialize={true}
                     validationSchema={Blogschema}
                     onSubmit={async (values) => {
                         BlogData(values)
