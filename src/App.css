@@ -179,7 +179,10 @@
 .slick-arrow .slick-prev{
   display: none !important;
 }
-
+.box-slider{
+  height: 700px;
+  overflow: hidden;
+}
 
 /* slider-img */
 .img-contact {

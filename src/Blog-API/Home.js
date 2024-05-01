@@ -72,16 +72,16 @@ const Home = () => {
         <Row>
           <div className="slider-container p-0">
             <Slider {...settings}>
-              <div>
+              <div className='box-slider'>
                 <img width="100%" height="100%" src={s1} alt="" />
               </div>
-              <div>
+              <div  className='box-slider'>
                 <img width="100%" height="100%" src={s2} alt="" />
               </div>
-              <div>
+              <div  className='box-slider'>
                 <img width="100%" height="100%" src={s3} alt="" />
               </div>
-              <div>
+              <div  className='box-slider'>
                 <img width="100%" height="100%" src={s4} alt="" />
               </div>
             </Slider>
@@ -154,11 +154,11 @@ const Home = () => {
               </div>
             </div>
           </Row>
-          <Row>
+          {/* <Row>
             <div className='text-center mt-5 '>
               <a href="/blog" className="text-white fs-5 p-3 blog-btn rounded-0 fw-bold">View All Blog  <FaArrowRightLong /></a>
             </div>
-          </Row>
+          </Row> */}
         </Container>
       </Container>
 
