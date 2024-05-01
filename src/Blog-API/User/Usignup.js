@@ -27,7 +27,7 @@ const Usignup = () => {
                     }}
                     validationSchema={Signupschema}
                     onSubmit={async (values) => {
-                        axios.post('https://blog-api-2agl.onrender.com/user/signup', values)
+                        axios.post('https://blog-api-flno.onrender.com/user/signup', values)
                             .then((res) => {
                                 console.log(res.data.data);
                                 history.push('/user/login')

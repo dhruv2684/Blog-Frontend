@@ -19,7 +19,7 @@ const Blog = () => {
   let id = localStorage.getItem('blogid')
 
   const getBlogone = () => {
-    axios.get('https://blog-api-2agl.onrender.com/blog/findone/' + id)
+    axios.get('https://blog-api-flno.onrender.com/blog/findone/' + id)
       .then((res) => {
         console.log(res.data.data);
         setData(res.data.data)
@@ -31,7 +31,7 @@ const Blog = () => {
 
   // delete
   const Delet = (id) => {
-    axios.delete('https://blog-api-2agl.onrender.com/blog/delete/' + id)
+    axios.delete('https://blog-api-flno.onrender.com/blog/delete/' + id)
       .then((res) => {
         console.log(res.data.data);
         history.push('/')
@@ -101,7 +101,7 @@ const Blog = () => {
           <div className="row">
             <div className="col-12 p-5">
               <div className='mb-3 text-center'>
-                <img width="70%" src={'https://blog-api-2agl.onrender.com/images/' + data.image} alt="" />
+                <img width="70%" src={'https://blog-api-flno.onrender.com/images/' + data.image} alt="" />
               </div>
               <h2 className='text-center fs-1'>{data.title}</h2>
               <p className='mt-4 fs-4'>{data.description}</p>

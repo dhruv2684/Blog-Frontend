@@ -24,7 +24,7 @@ const Home = () => {
 
 
   const getBlog = () => {
-    axios.get('https://blog-api-2agl.onrender.com/blog/find')
+    axios.get('https://blog-api-flno.onrender.com/blog/find')
       .then((res) => {
         console.log("iiii", res.data.data);
         setBlog(res.data.data)
@@ -68,8 +68,8 @@ const Home = () => {
         </Row>
       </Container> */}
 
-      <Container fluid className='mt-15'>
-        <Row>
+      <Container fluid className='mt-15 '>
+        <Row className='mb-0'>
           <div className="slider-container p-0">
             <Slider {...settings}>
               <div className=''>
@@ -98,7 +98,7 @@ const Home = () => {
               blog.map((el, index) => {
                 return <div className="col-12 " key={index}>
                   <div className='img-box point'>
-                    <img className='img-bor' onClick={() => card(el._id)} src={'https://blog-api-2agl.onrender.com/images/' + el.image} alt="" />
+                    <img className='img-bor' onClick={() => card(el._id)} src={'https://blog-api-flno.onrender.com/images/' + el.image} alt="" />
                   </div>
                   <div className='ps-md-5 ps-3'>
                     <h2 className='mt-2 '>{el.title}</h2>

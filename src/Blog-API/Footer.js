@@ -15,7 +15,7 @@ const Footer = () => {
     return (
         <div>
 
-            <Container fluid className='bg-dark pt-5 ps-0 pe-0 text-white '>
+            <Container fluid className='bg-dark pt-5 pb-5 ps-0 pe-0 text-white '>
                 <Container className=''>
                     <Row>
                         <div className='col-12 p-md-5 '>
