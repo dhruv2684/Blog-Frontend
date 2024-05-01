@@ -179,10 +179,7 @@
 .slick-arrow .slick-prev{
   display: none !important;
 }
-.box-slider{
-  height: 700px;
-  overflow: hidden;
-}
+
 
 /* slider-img */
 .img-contact {
@@ -319,6 +316,7 @@ textarea {
     display: inline-block;
     padding: 30px;
   }
+  
 }
 
 @media (max-width: 768px) {

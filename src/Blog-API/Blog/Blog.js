@@ -6,11 +6,9 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 import Slider from "react-slick";
-import ss1 from '../../BLog Img/slider (1).png'
-import ss2 from '../../BLog Img/slider (2).png'
-import ss3 from '../../BLog Img/slider (3).png'
-import ss4 from '../../BLog Img/slider (4).png'
-
+import ss1 from '../../BLog Img/slider1.png'
+import ss2 from '../../BLog Img/slider2.png'
+import ss3 from '../../BLog Img/slider3.png'
 
 const Blog = () => {
 
@@ -79,21 +77,18 @@ const Blog = () => {
         </Row>
       </Container> */}
 
-      <Container fluid>
+<Container fluid className='mt-15'>
         <Row>
           <div className="slider-container p-0">
             <Slider {...settings}>
-              <div>
-                <img width="100%" height="100%" src={ss1} alt="" />
+              <div className=''>
+                <img width="100%" src={ss1} alt="" />
               </div>
-              <div>
-                <img width="100%" height="100%" src={ss2} alt="" />
+              <div className=''>
+                <img width="100%" src={ss2} alt="" />
               </div>
-              <div>
-                <img width="100%" height="100%" src={ss3} alt="" />
-              </div>
-              <div>
-                <img width="100%" height="100%" src={ss4} alt="" />
+              <div className=''>
+                <img width="100%" src={ss3} alt="" />
               </div>
             </Slider>
           </div>

@@ -11,10 +11,10 @@ import blog2 from '../BLog Img/blog2.jpg'
 import blog3 from '../BLog Img/blog3.jpg'
 
 import Slider from "react-slick";
-import s1 from '../BLog Img/slider (1).png'
-import s2 from '../BLog Img/slider (2).png'
-import s3 from '../BLog Img/slider (3).png'
-import s4 from '../BLog Img/slider (4).png'
+import s1 from '../BLog Img/slider1.png'
+import s2 from '../BLog Img/slider2.png'
+import s3 from '../BLog Img/slider3.png'
+
 
 
 const Home = () => {
@@ -72,17 +72,14 @@ const Home = () => {
         <Row>
           <div className="slider-container p-0">
             <Slider {...settings}>
-              <div className='box-slider'>
-                <img width="100%" height="100%" src={s1} alt="" />
+              <div className=''>
+                <img width="100%" src={s1} alt="" />
               </div>
-              <div  className='box-slider'>
-                <img width="100%" height="100%" src={s2} alt="" />
+              <div className=''>
+                <img width="100%" src={s2} alt="" />
               </div>
-              <div  className='box-slider'>
-                <img width="100%" height="100%" src={s3} alt="" />
-              </div>
-              <div  className='box-slider'>
-                <img width="100%" height="100%" src={s4} alt="" />
+              <div className=''>
+                <img width="100%" src={s3} alt="" />
               </div>
             </Slider>
           </div>
@@ -90,13 +87,13 @@ const Home = () => {
       </Container>
 
       {/* Blog,Map Card */}
-      <Container fluid className='bg-lite text-dark pt-5 pb-5 ps-0 pe-0'>
+      <Container fluid className='bg-lite text-dark pt-5 ps-0 pe-0'>
         <Container className="">
-          <Row className='mb-md-4 mb-3 text-center'>
-            <h1>Writing <LuRedoDot className='dot-colr fs-3' /></h1>
-          </Row>
-
           <Row className="  ">
+            <div className='mb-md-4 text-center'>
+              <h1 className='mb-0'>Writing <LuRedoDot className='dot-colr fs-3' /></h1>
+            </div>
+
             {
               blog.map((el, index) => {
                 return <div className="col-12 " key={index}>
@@ -117,7 +114,7 @@ const Home = () => {
       </Container>
 
       {/* Blog Card */}
-      <Container fluid className='bg-lite text-dark pt-5 pb-5 ps-0 pe-0'>
+      <Container fluid className='bg-lite text-dark mt-5 pb-5 ps-0 pe-0'>
         <Container className="">
           <Row className='g-5'>
             <div className="col-12 " onClick={card}>
