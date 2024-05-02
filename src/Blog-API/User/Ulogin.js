@@ -28,7 +28,7 @@ const Ulogin = () => {
                     }}
                     validationSchema={loginschema}
                     onSubmit={async (values) => {
-                        axios.post('https://blog-api-flno.onrender.com/user/login', values)
+                        axios.post('https://blog-api-dzjv.onrender.com/user/login', values)
                             .then((res) => {
                                 console.log(res.data);
                                 localStorage.setItem('usertoken', res.data.usertoken)

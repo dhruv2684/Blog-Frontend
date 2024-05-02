@@ -24,7 +24,7 @@ const Home = () => {
 
 
   const getBlog = () => {
-    axios.get('https://blog-api-flno.onrender.com/blog/find')
+    axios.get('https://blog-api-dzjv.onrender.com/blog/find')
       .then((res) => {
         console.log("iiii", res.data.data);
         setBlog(res.data.data)
@@ -98,7 +98,7 @@ const Home = () => {
               blog.map((el, index) => {
                 return <div className="col-12 " key={index}>
                   <div className='img-box point'>
-                    <img className='img-bor' onClick={() => card(el._id)} src={'https://blog-api-flno.onrender.com/images/' + el.image} alt="" />
+                    <img className='img-bor' onClick={() => card(el._id)} src={'https://blog-api-dzjv.onrender.com/images/' + el.image} alt="" />
                   </div>
                   <div className='ps-md-5 ps-3'>
                     <h2 className='mt-2 '>{el.title}</h2>
@@ -117,34 +117,34 @@ const Home = () => {
       <Container fluid className='bg-lite text-dark mt-5 pb-5 ps-0 pe-0'>
         <Container className="">
           <Row className='g-5'>
-            <div className="col-12 " onClick={card}>
+            <div className="col-12  p-0" onClick={card}>
               <div className='img-box point'>
                 <img className='img-bor' src={blog1} alt="" />
               </div>
               <div className='ps-md-5 ps-3 '>
-                <h2 className='mt-2 '>title</h2>
+                <h2 className='mt-2 '>Cheerful Loving Couple Bakers Drinking Coffee</h2>
                 <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
                 <hr />
                 <p className='ms-1'><a href="" onClick={card} className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
               </div>
             </div>
-            <div className="col-12 " onClick={card}>
+            <div className="col-12  p-0" onClick={card}>
               <div className='img-box point'>
                 <img className='img-bor' src={blog2} alt="" />
               </div>
               <div className='ps-md-5 ps-3 '>
-                <h2 className='mt-2 '>title</h2>
+                <h2 className='mt-2 '>Loft Office With Vintage Decor For Creative Working</h2>
                 <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
                 <hr />
                 <p className='ms-1'><a href="" onClick={card} className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
               </div>
             </div>
-            <div className="col-12 " onClick={card}>
+            <div className="col-12  p-0" onClick={card}>
               <div className='img-box point'>
                 <img className='img-bor' src={blog3} alt="" />
               </div>
               <div className='ps-md-5 ps-3 '>
-                <h2 className='mt-2 '>title</h2>
+                <h2 className='mt-2 '>Cosy Bright Office In Yellow And Grey Colors</h2>
                 <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
                 <hr />
                 <p className='ms-1'><a href="" onClick={card} className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>

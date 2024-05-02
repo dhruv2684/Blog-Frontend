@@ -24,7 +24,7 @@ const Cblog = () => {
 
 
         if (upId) {
-            axios.get('https://blog-api-flno.onrender.com/blog/findone/' + upId)
+            axios.get('https://blog-api-dzjv.onrender.com/blog/findone/' + upId)
                 .then((res) => {
                     console.log("hftre", res.data.data);
                     setInitialValues(res.data.data)
@@ -45,7 +45,7 @@ const Cblog = () => {
         form.append('description', values.description);
 
         if (row == null) {
-            axios.post('https://blog-api-flno.onrender.com/blog/create', form,
+            axios.post('https://blog-api-dzjv.onrender.com/blog/create', form,
                 {
                     headers: {
                         usertoken: usertoken,
@@ -66,7 +66,7 @@ const Cblog = () => {
         }
         else {
             console.log("update");
-            axios.put('https://blog-api-flno.onrender.com/blog/update/' + upId, form,
+            axios.put('https://blog-api-dzjv.onrender.com/blog/update/' + upId, form,
                 {
                     headers: {
                         usertoken: usertoken,

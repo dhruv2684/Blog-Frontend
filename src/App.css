@@ -92,6 +92,7 @@
 
 .img-bor {
   width: 100%;
+  overflow: hidden;
 }
 
 .fs-60 {
@@ -171,7 +172,7 @@
 }
 
 .mt-15{
-  margin-top: 70px;
+  margin-top: 60px;
 }
 .slick-arrow{
   display: none !important;

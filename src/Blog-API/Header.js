@@ -18,6 +18,7 @@ const Header = () => {
         // console.log("Demo");
         localStorage.removeItem('blogid')
         localStorage.removeItem('usertoken')
+        localStorage.removeItem('updateId')
         history.push('/')
     }
 
