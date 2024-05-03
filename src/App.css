@@ -297,6 +297,9 @@ textarea {
   padding: 30px;
 }
 
+/* .hr{
+  width: 100%;
+} */
 
 
 
@@ -317,6 +320,11 @@ textarea {
     display: inline-block;
     padding: 30px;
   }
+  .img-box {
+    overflow: hidden;
+    border-radius: 0px;
+  }
+
   
 }
 

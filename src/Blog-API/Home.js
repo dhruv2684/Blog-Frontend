@@ -121,10 +121,10 @@ const Home = () => {
               <div className='img-box point'>
                 <img className='img-bor' src={blog1} alt="" />
               </div>
-              <div className='ps-md-5 ps-3 '>
+              <div className='p-4'>
                 <h2 className='mt-2 '>Cheerful Loving Couple Bakers Drinking Coffee</h2>
                 <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
-                <hr />
+                <hr className='hr-width' />
                 <p className='ms-1'><a href="" onClick={card} className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
               </div>
             </div>
@@ -132,7 +132,7 @@ const Home = () => {
               <div className='img-box point'>
                 <img className='img-bor' src={blog2} alt="" />
               </div>
-              <div className='ps-md-5 ps-3 '>
+              <div className='ps-4 '>
                 <h2 className='mt-2 '>Loft Office With Vintage Decor For Creative Working</h2>
                 <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
                 <hr />
@@ -143,10 +143,10 @@ const Home = () => {
               <div className='img-box point'>
                 <img className='img-bor' src={blog3} alt="" />
               </div>
-              <div className='ps-md-5 ps-3 '>
+              <div className='ps-4 '>
                 <h2 className='mt-2 '>Cosy Bright Office In Yellow And Grey Colors</h2>
                 <p className='text-dark fs-5 mt-3'>deicription...!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem inventore similique! Quod corrupti deserunt iusto voluptatem facilis, neque nulla!</p>
-                <hr />
+                <hr  />
                 <p className='ms-1'><a href="" onClick={card} className='text-dark fs-6 Read-more mt-3'>Continue Reading..!</a></p>
               </div>
             </div>
